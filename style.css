@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Montserrat:wght@300&family=Outfit:wght@300&family=Overpass:wght@900&family=Red+Hat+Display:wght@500;700;900&family=Roboto&display=swap");
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-pale-blue: hsl(225, 100%, 94%);
+  --color-Bright-blue: hsl(245, 75%, 52%);
+  --color-very-pale-blue: hsl(225, 100%, 98%);
+  --color-desaturated-blue: hsl(224, 23%, 55%);
+  --color-dark-blue: hsl(223, 47%, 23%);
+  --main-fs: 16px;
+  --fw-small: 500;
+  --fw-normal: 700;
+  --fw-bold: 900;
+  --font-familly: "Red Hat Display", sans-serif;
+}
+main {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--main-fs);
+  font-family: var(--font-familly);
+  background-color: var(--color-pale-blue);
+  position: relative;
+}
+.background-img {
+  width: 100vw;
+  position: absolute;
+}
+
+/* CARD*/
+.card {
+  width: 28em;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 12px 15px var(--color-Bright-blue);
+}
+.hero_img img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  max-width: 100%;
+}
+.card-content {
+  padding: 2em 0.5em;
+}
+.content {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+}
+.card-text {
+  padding: 0 1em;
+}
+.card-text h1 {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.card-text p {
+  color: var(--color-desaturated-blue);
+
+  line-height: 1.6;
+}
+
+/*PRICE PLAN */
+.plan {
+  display: flex;
+}
+.plan img {
+  padding-right: 1em;
+}
+.annual-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em 0;
+  padding: 1em;
+  background-color: var(--color-very-pale-blue);
+  border-radius: 10px;
+}
+
+.plan p {
+  color: var(--color-desaturated-blue);
+  margin-top: 0.2em;
+}
+.proceed,
+.cancel {
+  display: block;
+  margin: auto;
+  width: 100%;
+  padding: 1em 1em;
+  border-radius: 10px;
+  border: none;
+  font-weight: var(--fw-normal);
+  cursor: pointer;
+}
+.proceed {
+  margin-bottom: 2em;
+  background-color: var(--color-Bright-blue);
+  color: white;
+  box-shadow: 0px 1px 10px 0px hsl(245, 75%, 52%);
+}
+.cancel {
+  background: none;
+  color: var(--color-desaturated-blue);
+  font-size: var(--main-fs);
+}
+
+.change-plan {
+  font-weight: var(--fw-normal);
+  color: var(--color-Bright-blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .background-img {
+    display: none;
+  }
+
+  .card {
+    width: 90vw;
+  }
+  .content {
+    width: 90%;
+  }
+}
+
+/*ACTIVE STATE*/
+
+.cancel:hover {
+  color: var(--color-dark-blue);
+}
+.proceed:hover {
+  opacity: 0.7;
+}
+.change-plan:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}
